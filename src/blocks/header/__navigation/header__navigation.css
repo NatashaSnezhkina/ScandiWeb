@@ -1,0 +1,7 @@
+.header__navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+	margin: 0 0 0 101px;
+	padding: 0;
+}

@@ -1,0 +1,9 @@
+.header__currency {
+  width: 38px;
+  height: 29px;
+  background-image: url(../../../images/currency.svg);
+  background-color: rgba(0, 0, 0, 0);
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+}

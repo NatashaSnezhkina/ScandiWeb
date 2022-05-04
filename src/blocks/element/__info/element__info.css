@@ -1,0 +1,6 @@
+.element__info {
+  margin: 0px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}

@@ -1,0 +1,13 @@
+.element {
+  background-color: #FFF;
+  font-size: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: min-content;
+}
+
+.element:hover {
+  border-radius: 4px #A8ACB0
+  ;
+}
