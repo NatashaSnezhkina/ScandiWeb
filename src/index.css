@@ -1,10 +1,12 @@
 @import url(./vendor/normalize.css);
 @import url(./fonts/Inter/inter.css);
+@import url(./fonts/Raleway/raleway.css);
 @import url(./blocks/root/root.css);
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
 @import url(./blocks/header/__navigation/header__navigation.css);
 @import url(./blocks/header/__element/header__element.css);
+@import url(./blocks/header/__element/header__element_chosen.css);
 @import url(./blocks/header/__actions/header__actions.css);
 @import url(./blocks/header/__currency/header__currency.css);
 @import url(./blocks/header/__empy-cart/header__empty-cart.css);

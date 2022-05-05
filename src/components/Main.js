@@ -1,6 +1,4 @@
-import React, { useContext } from 'react';
 import Card from './Card';
-import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 function Main({
   onEditProfile,
@@ -9,21 +7,19 @@ function Main({
   onCardClick,
   cards,
   onCardLike,
-  onCardDelete
+  onCardDelete,
+  categoryName
 }) {
-
-  const currentUser = useContext(CurrentUserContext);
 
   return (
     <main>
-      <h1 className='title' align="left">Categoty name</h1>
+      <h1 className='title' align="left">{categoryName}</h1>
       <section className="elements">
         {cards.map((card) =>
         (<Card
-          key={card._id}
+          key={card.id}
           card={card}
           onCardClick={onCardClick}
-          currentUser={currentUser}
           onCardLike={onCardLike}
           onCardDelete={onCardDelete}
         />))}

@@ -1,11 +1,11 @@
 .header {
-  height: 80px;
+  /* height: 80px; */
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 24px auto 0px auto;
   font-size: 0;
   background-color:  #FFFFFF;
 	display: flex;
 	justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 

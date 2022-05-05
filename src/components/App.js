@@ -6,14 +6,15 @@ import { GET_ALL_CARDS } from '../query/cards';
 
 function App() {
   const [cards, setCards] = useState([]);
+  const [categoryName, setCategoryName] = useState('ALL');
   const { data, loading, error } = useQuery(GET_ALL_CARDS);
 
-  console.log(data);
-  console.log(data.category.products);
-
-  // useEffect(() => {
-  //   setCards(data.category.products);
-  // }, [data.category.products])
+  useEffect(() => {
+    if (!loading) {
+      const arr = data.category.products;
+      setCards(arr)
+    }
+  })
 
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
         <Header />
         <Main
           cards={cards}
+          categoryName={categoryName}
         >
         </Main>
 

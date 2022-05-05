@@ -6,7 +6,9 @@ query {
     title: "tech"
   }){
     products {
+      id
       name
+      gallery
     }
 }
 }  
