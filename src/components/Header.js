@@ -10,6 +10,7 @@ class Header extends React.Component {
       focus: false
     };
     this.addActiveClass = this.addActiveClass.bind(this);
+    // this.onCurrencyClick = this.onCurrencyClick();
   }
 
   addActiveClass() {
@@ -17,9 +18,9 @@ class Header extends React.Component {
     this.setState({ focus: !currentState });
   }
 
-  onClick(category) {
+  onCategoryClick(category) {
     console.log(category);
-    this.props.onClick(category);
+    this.props.onCategoryClick(category);
     this.props.addActiveClass;
   }
 
@@ -27,13 +28,13 @@ class Header extends React.Component {
     return (
       <header className="header">
         <ul className="header__navigation">
-          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={() => this.onClick("all")}>ALL</button></li>
-          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={() => this.onClick("tech")}>TECH</button></li>
-          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={() => this.onClick("clothes")}>CLOTHES</button></li>
+          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={() => this.onCategoryClick("all")}>ALL</button></li>
+          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={() => this.onCategoryClick("tech")}>TECH</button></li>
+          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={() => this.onCategoryClick("clothes")}>CLOTHES</button></li>
         </ul>
         <img className="header__logo" src={logo} alt="логотип" />
         <div className="header__actions">
-          <button className="header__currency"></button>
+          <button className="header__currency" onClick={this.props.onCurrencyClick}></button>
           <button className="header__empty-cart"></button>
         </div>
       </header>

@@ -1,0 +1,24 @@
+.popup-currency {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 65px;
+  right: 78px;
+  /* width: 114px; */
+  padding: 20px 40px 20px 20px;
+  margin: 0;
+  background-color: #FFF;
+}
+
+@media only screen and (max-width: 600px) {
+  .popup-currency {
+    right: 60px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .popup-currency {
+    right: 40px;
+  }
+}
