@@ -17,13 +17,19 @@ class Header extends React.Component {
     this.setState({ focus: !currentState });
   }
 
+  onClick(category) {
+    console.log(category);
+    this.props.onClick(category);
+    this.props.addActiveClass;
+  }
+
   render() {
     return (
       <header className="header">
         <ul className="header__navigation">
-          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={this.props.addActiveClass}>ALL</button></li>
-          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={this.props.addActiveClass}>TECH</button></li>
-          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={this.props.addActiveClass}>CLOTHES</button></li>
+          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={() => this.onClick("all")}>ALL</button></li>
+          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={() => this.onClick("tech")}>TECH</button></li>
+          <li><button className={`header__element ${this.state.focus ? "header__element_chosen" : ""}`} onClick={() => this.onClick("clothes")}>CLOTHES</button></li>
         </ul>
         <img className="header__logo" src={logo} alt="логотип" />
         <div className="header__actions">

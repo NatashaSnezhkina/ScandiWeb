@@ -13,7 +13,7 @@ function Main({
 
   return (
     <main>
-      <h1 className='title' align="left">{categoryName}</h1>
+      <h1 className='title' align="left">{categoryName.toUpperCase()}</h1>
       <section className="elements">
         {cards.map((card) =>
         (<Card

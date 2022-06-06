@@ -1,9 +1,9 @@
 import { gql } from '@apollo/client'
 
-export const GET_ALL_CARDS = gql`
+export const GET_CARDS = (name) =>  gql`
 query {
   category(input: {
-    title: "tech"
+    title: \"${name}\"
   }){
     products {
       id

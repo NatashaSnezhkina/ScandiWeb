@@ -1,6 +1,6 @@
 .element__photo {
-  width: 330px;
-  height: 354px;
+  width: 354px;
+  height: 330px;
   cursor: pointer;
   object-fit: cover;
   margin: 16px 16px 24px 16px;
